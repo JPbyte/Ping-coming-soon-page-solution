@@ -38,8 +38,8 @@ Desktop design
 
 ### Links
 
-- Solution URL: [Ping coming soon page solution]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [Ping coming soon page solution](https://www.frontendmentor.io/solutions/ping-coming-soon-page-solution-s3lb0xGiOL)
+- Live Site URL: [Add live site URL here](https://jpbyte.github.io/Ping-coming-soon-page-solution/)
 
 ## My process
 
