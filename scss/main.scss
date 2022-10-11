@@ -1,0 +1,198 @@
+//Primary
+
+$Blue: hsl(223, 87%, 63%);
+
+//Secondary
+
+$Pale-Blue: hsl(223, 100%, 88%);
+$Light-Red: hsl(354, 100%, 66%);
+
+//Neutral
+
+$Gray: hsl(0, 0%, 59%);
+$Very-Dark-Blue: hsl(209, 33%, 12%);
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+
+@keyframes flutuar {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', sans-serif;
+    list-style: none;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+        header{
+            margin-bottom: 30px;
+            .image{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                margin-top: 65px;
+                margin-bottom: 35px;
+                img{
+                    width: 120px;
+                }
+            }
+            h1{
+                font-size: 55px;
+                color: $Gray;
+                font-weight: 400;
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: center;
+                    span{
+                        color: $Very-Dark-Blue;
+                        font-weight: 700;
+                        margin-left: 5px;
+                    }
+            }
+            .header-p{
+                display: flex;
+                justify-content: center;
+                font-size: 23px;
+            }
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 30px;
+                .text{
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                        #input-text{
+                            width: 100%;
+                            max-width: 393px;
+                            height: 45px;
+                            border: 2px $Gray solid;
+                            border-radius: 20px;
+                            padding: 18px;
+                            font-size: 16px;
+                        }
+                        .btn-submit{
+                            width: 100%;
+                            max-width: 180px;
+                            height: 45px;
+                            border: 2px $Blue solid;
+                            border-radius: 20px;
+                            margin-left: 10px;
+                            color: white;
+                            background-color: $Blue;
+                            font-weight: 600;
+                            font-size: 16px;
+                            cursor: pointer;
+                                &:hover{
+                                    transform: scale(1.04);
+                                    transition: 0.3s;
+                                }
+                        }
+                }
+                .image{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                        img{
+                            width: 100%;
+                            max-width: 600px;
+                            animation: flutuar 1.5s infinite;
+                        }
+                }
+                .error{
+                    opacity: 0;
+                    text-align: center;
+                    position: relative;
+                    right: 145px;
+                    bottom: 10px;
+                    color: $Light-Red;
+                }
+                .active{
+                    opacity: 1;
+                    transition: 0.6s;
+                }
+        }
+        footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            ul{
+                width: 100%;
+                max-width: 120px;
+                justify-content: space-between;
+                display: flex;
+                margin-bottom: 20px;
+                li{
+                    img{
+                        width: 30px;
+                        cursor: pointer;
+                            &:hover{
+                                transform: translateY(-2px);
+                                transition: 0.4s;
+                                filter: brightness(0) saturate(100%) invert(42%) sepia(56%) saturate(1212%) hue-rotate(198deg) brightness(99%) contrast(92%);
+                            }
+                    }
+                }
+            }
+        }
+        .perfil{
+            text-align: center;
+        }
+
+@media (max-width: 425px){
+    header{
+        h1{
+            font-size: 38px;
+        }
+    }
+    main{
+        .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+                #input-text{
+                    margin-bottom: 37px;
+                }
+                .btn-submit{
+                    width: 100%;
+                    max-width: 393px;
+                }
+        }
+        .error{
+            right: 0;
+            bottom: 94px;
+        }
+    }
+}
+@media (max-width: 375px){
+    header{
+        h1{
+            font-size: 29px;
+        }
+    }
+}
+}
